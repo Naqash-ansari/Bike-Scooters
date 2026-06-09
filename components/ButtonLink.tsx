@@ -18,7 +18,7 @@ export default function ButtonLink({
     dark: "border border-slate-300 bg-white text-slate-900 hover:border-slate-500 hover:bg-slate-50"
   };
 
-  const className = `inline-flex min-h-12 items-center justify-center rounded-sm px-5 py-3 text-center text-sm font-black uppercase tracking-wide transition ${styles[variant]}`;
+  const className = `action-link inline-flex min-h-12 items-center justify-center rounded-sm px-5 py-3 text-center text-sm font-black uppercase tracking-wide ${styles[variant]}`;
 
   if (href.startsWith("/")) {
     return (

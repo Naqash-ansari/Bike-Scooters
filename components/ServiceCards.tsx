@@ -1,5 +1,6 @@
 import Link from "next/link";
 import LoadingImage from "./LoadingImage";
+import ScrollReveal from "./ScrollReveal";
 import { services } from "./site-data";
 
 type ServiceCardsProps = {
@@ -56,10 +57,8 @@ export default function ServiceCards({ detailed = false }: ServiceCardsProps) {
         const asset = serviceAssets[index];
 
         return (
-          <article
-            key={service.title}
-            className="group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-red/40 hover:shadow-2xl"
-          >
+          <ScrollReveal key={service.title} delay={(index % 4) * 80}>
+          <article className="interactive-card group h-full overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm hover:border-brand-red/40">
             <div className="relative overflow-hidden">
               <LoadingImage
                 src={asset.image}
@@ -109,6 +108,7 @@ export default function ServiceCards({ detailed = false }: ServiceCardsProps) {
               </div>
             </div>
           </article>
+          </ScrollReveal>
         );
       })}
     </div>

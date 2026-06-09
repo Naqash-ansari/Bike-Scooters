@@ -1,6 +1,7 @@
 import SectionHeader from "./SectionHeader";
 import ButtonLink from "./ButtonLink";
 import LoadingImage from "./LoadingImage";
+import ScrollReveal from "./ScrollReveal";
 
 const steps = [
   "Bring your bike or send photos by WhatsApp.",
@@ -26,7 +27,7 @@ export default function BuySellPanel() {
           </div>
         </div>
         <div>
-          <div className="mb-4 overflow-hidden rounded-md border border-slate-200 bg-slate-100 shadow-sm">
+          <ScrollReveal className="mb-4 overflow-hidden rounded-md border border-slate-200 bg-slate-100 shadow-sm">
             <LoadingImage
               src="/images/buy-sell-bike-inspection.png"
               alt="Bikes and scooters suitable for buying and selling"
@@ -34,15 +35,17 @@ export default function BuySellPanel() {
               height={520}
               className="aspect-[16/9] w-full object-cover"
             />
-          </div>
+          </ScrollReveal>
           <div className="grid gap-4">
           {steps.map((step, index) => (
-            <div key={step} className="rounded-md fine-border bg-slate-50 p-6">
+            <ScrollReveal key={step} delay={index * 90}>
+            <div className="interactive-card rounded-md fine-border bg-slate-50 p-6">
               <span className="text-sm font-extrabold text-brand-red">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <p className="mt-3 text-lg font-semibold text-slate-800">{step}</p>
             </div>
+            </ScrollReveal>
           ))}
           </div>
         </div>

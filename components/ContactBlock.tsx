@@ -1,4 +1,5 @@
 import ButtonLink from "./ButtonLink";
+import ScrollReveal from "./ScrollReveal";
 import {
   phoneDisplay,
   phoneHref,
@@ -15,7 +16,7 @@ export default function ContactBlock() {
   return (
     <section className="bg-white px-4 py-20">
       <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-        <div>
+        <ScrollReveal>
           <p className="text-sm font-bold text-brand-red">Contact M7</p>
           <h2 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight text-slate-950 md:text-5xl">
             Call, WhatsApp, or request a quote.
@@ -35,7 +36,7 @@ export default function ContactBlock() {
               WhatsApp
             </ButtonLink>
           </div>
-          <div className="mt-8 rounded-md fine-border bg-slate-50 p-6">
+          <div className="interactive-card mt-8 rounded-md fine-border bg-slate-50 p-6">
             <p className="text-xl font-extrabold text-slate-950">Find us</p>
             <p className="mt-1 text-sm text-slate-600">{shopAddress}</p>
             <iframe
@@ -46,7 +47,7 @@ export default function ContactBlock() {
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
-          <div className="mt-5 rounded-md fine-border bg-slate-50 p-6">
+          <div className="interactive-card mt-5 rounded-md fine-border bg-slate-50 p-6">
             <p className="text-xl font-extrabold text-slate-950">Share this shop</p>
             <p className="mt-1 text-sm leading-6 text-slate-600">
               Send M7 Bike & Scooters to someone who needs bike repairs, rentals, or parts.
@@ -78,8 +79,9 @@ export default function ContactBlock() {
               </a>
             </div>
           </div>
-        </div>
-        <form className="rounded-md fine-border bg-slate-50 p-6 shadow-sm">
+        </ScrollReveal>
+        <ScrollReveal delay={120}>
+        <form className="interactive-card rounded-md fine-border bg-slate-50 p-6 shadow-sm">
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="block">
               <span className="text-sm font-bold text-slate-700">Name</span>
@@ -126,6 +128,7 @@ export default function ContactBlock() {
             This demo form is ready for connection to your preferred email or CRM service.
           </p>
         </form>
+        </ScrollReveal>
       </div>
     </section>
   );

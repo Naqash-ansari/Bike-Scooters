@@ -17,7 +17,7 @@ export default function LoadingImage({
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="motion-image relative overflow-hidden">
       <Image
         {...props}
         alt={alt}

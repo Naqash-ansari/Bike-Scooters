@@ -1,6 +1,7 @@
 import ButtonLink from "./ButtonLink";
 import SectionHeader from "./SectionHeader";
 import LoadingImage from "./LoadingImage";
+import ScrollReveal from "./ScrollReveal";
 
 const prices = [
   { name: "Quick Ride", price: "GBP 8", detail: "Up to 2 hours" },
@@ -17,7 +18,7 @@ export default function RentalPricing() {
           title="Simple hire options for short trips and longer rides."
           copy="Dummy pricing shown for website setup. The shop can replace these rates with live rental prices, deposit rules, and ID requirements."
         />
-        <div className="mb-8 overflow-hidden rounded-md border border-slate-200 bg-white shadow-sm">
+        <ScrollReveal className="mb-8 overflow-hidden rounded-md border border-slate-200 bg-white shadow-sm">
           <LoadingImage
             src="/images/rental-pricing-hire-options.png"
             alt="Rental bikes and scooters ready for hire"
@@ -25,10 +26,11 @@ export default function RentalPricing() {
             height={640}
             className="aspect-[18/7] w-full object-cover"
           />
-        </div>
+        </ScrollReveal>
         <div className="grid gap-4 md:grid-cols-3">
-          {prices.map((price) => (
-            <article key={price.name} className="rounded-md fine-border bg-white p-7 shadow-sm">
+          {prices.map((price, index) => (
+            <ScrollReveal key={price.name} delay={index * 90}>
+            <article className="interactive-card h-full rounded-md fine-border bg-white p-7 shadow-sm">
               <h3 className="text-2xl font-extrabold text-slate-950">{price.name}</h3>
               <p className="mt-5 text-4xl font-extrabold text-brand-red">{price.price}</p>
               <p className="mt-2 font-semibold text-slate-600">{price.detail}</p>
@@ -38,6 +40,7 @@ export default function RentalPricing() {
                 </ButtonLink>
               </div>
             </article>
+            </ScrollReveal>
           ))}
         </div>
       </div>

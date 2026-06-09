@@ -1,5 +1,6 @@
 import LoadingImage from "./LoadingImage";
 import SectionHeader from "./SectionHeader";
+import ScrollReveal from "./ScrollReveal";
 
 const galleryImages = [
   {
@@ -30,24 +31,26 @@ export default function Gallery() {
         />
         <div className="grid gap-5 md:grid-cols-3">
           {galleryImages.map((item, index) => (
-            <article
+            <ScrollReveal
               key={item.title}
-              className={`overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-sm ${
-                index === 0 ? "md:col-span-2" : ""
-              }`}
+              className={index === 0 ? "md:col-span-2" : ""}
+              delay={index * 100}
             >
+            <article className="interactive-card h-full overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-sm">
               <LoadingImage
                 src={item.src}
                 alt={item.title}
                 width={900}
                 height={620}
                 className="aspect-[16/10] w-full object-cover"
+                skeletonClassName="motion-image"
               />
               <div className="p-5">
                 <h3 className="text-xl font-extrabold text-slate-950">{item.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-slate-600">{item.copy}</p>
               </div>
             </article>
+            </ScrollReveal>
           ))}
         </div>
       </div>

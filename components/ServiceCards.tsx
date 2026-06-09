@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import LoadingImage from "./LoadingImage";
 import { services } from "./site-data";
 
 type ServiceCardsProps = {
@@ -61,7 +61,7 @@ export default function ServiceCards({ detailed = false }: ServiceCardsProps) {
             className="group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-red/40 hover:shadow-2xl"
           >
             <div className="relative overflow-hidden">
-              <Image
+              <LoadingImage
                 src={asset.image}
                 alt={service.title}
                 width={720}

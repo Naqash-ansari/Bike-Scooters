@@ -1,6 +1,6 @@
 import ButtonLink from "./ButtonLink";
 import SectionHeader from "./SectionHeader";
-import Image from "next/image";
+import LoadingImage from "./LoadingImage";
 
 const prices = [
   { name: "Quick Ride", price: "GBP 8", detail: "Up to 2 hours" },
@@ -18,7 +18,7 @@ export default function RentalPricing() {
           copy="Dummy pricing shown for website setup. The shop can replace these rates with live rental prices, deposit rules, and ID requirements."
         />
         <div className="mb-8 overflow-hidden rounded-md border border-slate-200 bg-white shadow-sm">
-          <Image
+          <LoadingImage
             src="/images/rental-pricing-hire-options.png"
             alt="Rental bikes and scooters ready for hire"
             width={1200}

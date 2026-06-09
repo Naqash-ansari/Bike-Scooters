@@ -1,6 +1,6 @@
 import SectionHeader from "./SectionHeader";
 import ButtonLink from "./ButtonLink";
-import Image from "next/image";
+import LoadingImage from "./LoadingImage";
 
 const steps = [
   "Bring your bike or send photos by WhatsApp.",
@@ -27,7 +27,7 @@ export default function BuySellPanel() {
         </div>
         <div>
           <div className="mb-4 overflow-hidden rounded-md border border-slate-200 bg-slate-100 shadow-sm">
-            <Image
+            <LoadingImage
               src="/images/buy-sell-bike-inspection.png"
               alt="Bikes and scooters suitable for buying and selling"
               width={900}

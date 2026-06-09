@@ -1,4 +1,4 @@
-import Image from "next/image";
+import LoadingImage from "./LoadingImage";
 import SectionHeader from "./SectionHeader";
 
 const galleryImages = [
@@ -36,7 +36,7 @@ export default function Gallery() {
                 index === 0 ? "md:col-span-2" : ""
               }`}
             >
-              <Image
+              <LoadingImage
                 src={item.src}
                 alt={item.title}
                 width={900}

@@ -19,7 +19,7 @@ export default function RentalPricing() {
         />
         <div className="mb-8 overflow-hidden rounded-md border border-slate-200 bg-white shadow-sm">
           <Image
-            src="/images/rental-bikes-scooters.png"
+            src="/images/rental-pricing-hire-options.png"
             alt="Rental bikes and scooters ready for hire"
             width={1200}
             height={640}

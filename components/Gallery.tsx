@@ -3,17 +3,17 @@ import SectionHeader from "./SectionHeader";
 
 const galleryImages = [
   {
-    src: "/images/uk-bikes-scooters-hero.png",
+    src: "/images/gallery-uk-bike-scooter-riders.png",
     title: "UK bike and scooter riders",
     copy: "Everyday transport for local streets, commuting, errands, and short trips."
   },
   {
-    src: "/images/bike-repair-workshop.png",
+    src: "/images/gallery-repair-service-centre.png",
     title: "Repair and service centre",
     copy: "Bike repairs, scooter support, spare parts, accessories, and safety checks."
   },
   {
-    src: "/images/rental-bikes-scooters.png",
+    src: "/images/gallery-rental-used-bikes.png",
     title: "Rental and used bikes",
     copy: "Bikes and scooters ready for hire, buying, selling, and practical daily use."
   }

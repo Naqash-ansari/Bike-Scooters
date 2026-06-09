@@ -28,7 +28,7 @@ export default function BuySellPanel() {
         <div>
           <div className="mb-4 overflow-hidden rounded-md border border-slate-200 bg-slate-100 shadow-sm">
             <Image
-              src="/images/uk-bikes-scooters-hero.png"
+              src="/images/buy-sell-bike-inspection.png"
               alt="Bikes and scooters suitable for buying and selling"
               width={900}
               height={520}

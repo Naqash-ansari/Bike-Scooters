@@ -13,22 +13,22 @@ const serviceAssets = [
     points: ["Safety check", "Brake & gear setup"]
   },
   {
-    image: "/images/bike-repair-workshop.png",
+    image: "/images/service-scooter-repair.png",
     tag: "Scooters",
     points: ["Tyres & brakes", "Service support"]
   },
   {
-    image: "/images/uk-bikes-scooters-hero.png",
+    image: "/images/service-new-bike-sales.png",
     tag: "Sales",
     points: ["New models", "Local advice"]
   },
   {
-    image: "/images/uk-bikes-scooters-hero.png",
+    image: "/images/service-used-bikes.png",
     tag: "Used Bikes",
     points: ["Fair offers", "Quick inspection"]
   },
   {
-    image: "/images/rental-bikes-scooters.png",
+    image: "/images/service-used-bike-selling.png",
     tag: "Pre-owned",
     points: ["Checked bikes", "Ready to ride"]
   },
@@ -38,12 +38,12 @@ const serviceAssets = [
     points: ["Short hire", "Daily options"]
   },
   {
-    image: "/images/bike-repair-workshop.png",
+    image: "/images/service-spare-parts.png",
     tag: "Parts",
     points: ["Tubes & tyres", "Brake pads"]
   },
   {
-    image: "/images/rental-bikes-scooters.png",
+    image: "/images/service-accessories.png",
     tag: "Accessories",
     points: ["Locks & lights", "Helmets & pumps"]
   }

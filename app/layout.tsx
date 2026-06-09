@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bike-scooters.vercel.app";
 
 const anton = Anton({
   subsets: ["latin"],
@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     apple: "/apple-icon.svg"
   },
   manifest: "/manifest.webmanifest",
+  alternates: {
+    canonical: siteUrl
+  },
   openGraph: {
     title: "M7 Bike & Scooters",
     description:
@@ -49,9 +52,10 @@ export const metadata: Metadata = {
     siteName: "M7 Bike & Scooters",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
+        type: "image/png",
         alt: "M7 Bike & Scooters social share card"
       }
     ],
@@ -62,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "M7 Bike & Scooters",
     description: "Sale - Repair - Accessories. All Bikes Spare Parts & Service Center.",
-    images: ["/opengraph-image"]
+    images: ["/og-image.png"]
   }
 };
 
